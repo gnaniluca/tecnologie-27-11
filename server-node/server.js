@@ -7,11 +7,7 @@ var cors = require('cors'); //HTTP access control (CORS) for cross origin reques
 app.use(cors()); //Setup cors
 // Point static path to dist
 app.use(express.static(path.join(__dirname, 'dist')));
-// Set our api response
-app.get('/api', (req, res) => {
-    res.send('api works');
-    });
-    
+// Set our api response    
     // Catch all other routes and return the index file
     app.get('/api', (req, res) => {
         var jsonData = {"results": ["Important 1 ","Thing 2"]};
